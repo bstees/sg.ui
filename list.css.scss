@@ -1,0 +1,58 @@
+// Lists and context lists
+
+// horizontal navigation ul lists
+.nav {
+	ul, li {
+	@extend .reset;		
+	}
+	> ul {
+	display: table;
+		> li {
+			display: table-cell; position: relative;
+			a {
+				display: block; padding: 1em; font-family: $hfont;
+				background: $primary; color: #fff; // just for default fallback;
+			}
+			ul { // Makes a secondary dropdown with shadow
+				@extend .reset;
+	    		@include shadow(#666,0,1.5em);
+	    		@include corner(bottom,left,6px);
+	    		@include corner(bottom,right,6px);
+	    		clip: rect(0px, 1000px, 1000px, -1.5em); background: #fff;
+				display: none; position: absolute; top:100%; left:0;
+				li {
+					@extend .reset;
+					display: block;
+	    			a {
+	    				padding: 5px 10px; 
+	    			}
+	    			a:hover {
+	    				background: $primary; color: #fff;
+	    			}
+				}
+				ul {
+		    		@include corner(top,right,6px);
+		    		@include shadow(#888,.5em,1em);
+		    		clip: none;
+				}
+			}
+		}
+	    li:hover ul, li:hover li:hover ul {
+	    	display: block;
+	    }
+	    li:hover ul ul { // keeps third level closed
+	    	display: none;
+	    }
+	}
+}
+
+// general body lists
+section ul {
+	@extend .reset;
+	padding:1.5em 0 1.5em 3em;
+	> li {
+		@extend .reset;
+		// Requires a sprite at the beginning of the file
+		padding: 0 0 1em 20px; background:url('v-sprites.png') 0 -(0*$icon) no-repeat;
+	}
+}

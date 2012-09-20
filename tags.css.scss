@@ -1,0 +1,49 @@
+// Base traditional tag definitions: h*, a, img, body, strong, b, small, caption
+// ul, li handled in list.css
+
+body {
+	@extend .reset;
+	font-family: $font; font-size: $m; color: $text; 
+	line-height: 1.5em; background: #fff;
+}
+
+/* Links */
+a {
+	color: $primary; outline: none; border: none; 
+	text-decoration: none !important;
+}
+a:hover {
+	color: darken($primary, 15%);
+}
+a img {
+	border: none; outline: none;
+}
+
+
+/* Typography */
+h1 {
+	@extend .reset;
+	font-family: $hfont; color:#000; font-size: 3em; line-height: 1.2em; 
+	padding-bottom: .5em; letter-spacing: -1px;
+}
+h2 {
+	@extend h1;
+	font-size: 2em;
+}
+h3 {
+	@extend h1;
+	font-size: 1.5em;
+}
+/* For nested elements inside h tags */
+h1 *, h2 *, h3 * {
+	font-family: $font; font-weight: 400; letter-spacing: normal; float: right;
+}
+
+/* Text styles */
+strong {
+	color: #000;
+}
+b {
+	@extend strong;
+}
+small {font-size: .8em; }
