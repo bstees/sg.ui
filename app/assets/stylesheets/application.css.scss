@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// Variables
+
+$text		: #666;		// body text color
+$primary 	: #589199;	// primary color used in ui elements
+$secondary 	: #a79374;	// secondary color used in ui elements
+$m 			: 12px;		// body text size, used for base of most measurements
+$icon 		: 16px;		// grid unit size for sprite file
+$hfont		: 'avenir_45_bookregular',"Century Gothic", sans-serif;
+
+// All base smaller and body text, stylized font defined in base.css.scss
+$font 		: Arial, Helvetica, sans-serif;
+
+/* Special Font / Bold Font */
+@font-face {
+    font-family: 'avenir_45_bookregular';
+    src: url('avenir-book-webfont.eot');
+    src: url('avenir-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('avenir-book-webfont.woff') format('woff'),
+         url('avenir-book-webfont.ttf') format('truetype'),
+         url('avenir-book-webfont.svg#avenir_45_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Import all css partials
+@import "base.css.scss";
+@import "tags.css.scss";
+@import "list.css.scss";

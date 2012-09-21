@@ -1,16 +1,16 @@
 // Lists and context lists
 
 // horizontal navigation ul lists
-.nav {
+nav {
 	ul, li {
 	@extend .reset;		
 	}
 	> ul {
-	display: table;
+	display: table; width: 100%;
 		> li {
 			display: table-cell; position: relative;
 			a {
-				display: block; padding: 1em; font-family: $hfont;
+				display: block; padding: 1em; // font-family: $hfont;
 				background: $primary; color: #fff; // just for default fallback;
 			}
 			ul { // Makes a secondary dropdown with shadow

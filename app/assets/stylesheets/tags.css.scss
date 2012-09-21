@@ -4,8 +4,14 @@
 body {
 	@extend .reset;
 	font-family: $font; font-size: $m; color: $text; 
-	line-height: 1.5em; background: #fff;
+	line-height: 1.5em; background: #fff; background: #efefef;
 }
+
+div#page {
+	margin: 2em; padding: 2em; background: #fff;
+	@include corners(1em);
+}
+
 
 /* Links */
 a {

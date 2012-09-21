@@ -1,19 +1,6 @@
 // Base mixins and includes
 // Add base implementations when possible as classes
 
-/* Special Font / Bold Font */
-@font-face {
-    font-family: 'avenir_45_bookregular';
-    src: url('avenir-book-webfont.eot');
-    src: url('avenir-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('avenir-book-webfont.woff') format('woff'),
-         url('avenir-book-webfont.ttf') format('truetype'),
-         url('avenir-book-webfont.svg#avenir_45_bookregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-$hfont		: 'avenir_45_bookregular',"Century Gothic", sans-serif;
-
 /* Corners */
 @mixin corners($px) {
 	-moz-border-radius: $px;
